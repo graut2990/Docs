@@ -1,0 +1,55 @@
+-- =============================================
+-- Author:	Ankit Purohit
+-- Create date: 23-May-19
+-- Description:	Get Doc Types
+-- =============================================
+ALTER PROCEDURE [dbo].[GetDocTypesForMultiNode] --'CWX_EMRSN_SASOL_DMS,CWX_EMRSN_FISHER_EU_DMS','COLLABORATION,CONTROLLED_DOCUMENTS'
+@DatabaseName VARCHAR(max)
+,@ArchiveName VARCHAR(100)
+AS
+BEGIN
+IF OBJECT_ID('tempdb..##temp') IS NOT NULL
+DROP TABLE ##temp
+
+DECLARE @Query VARCHAR(max)
+DECLARE @sql NVARCHAR(max);
+DECLARE @sqlPrefix NVARCHAR(100);
+DECLARE @sqlSuffix NVARCHAR(100);
+
+SELECT @sql = (
+SELECT ' UNION ALL
+        SELECT ' + + quotename(name, '''') + ' as database_name,
+               s.name COLLATE DATABASE_DEFAULT
+                    AS schema_name,
+               t.name COLLATE DATABASE_DEFAULT as table_name 
+               FROM ' + quotename(name) + '.sys.tables t
+               JOIN ' + quotename(name) + '.sys.schemas s
+                    on s.schema_id = t.schema_id'
+FROM sys.databases
+ORDER BY [name]
+FOR XML path('')
+,type
+).value('.', 'nvarchar(max)');
+
+SET @sql = stuff(@sql, 1, 12, '')
+SET @sqlPrefix = 'Select * into ##temp from ('
+SET @sqlSuffix = ') as d'
+SET @sql = @sqlPrefix + space(1) + @sql + space(1) + @sqlSuffix
+
+EXECUTE (@sql);
+
+SELECT @Query = STUFF((
+SELECT 'union select Doc_Type as Id, Doc_Type + ''-'' + Descript as Text from ' + database_name + '.[dbo].[' + table_name + ']'
+FROM ##temp T0
+INNER JOIN (
+SELECT *
+FROM dbo.split(@DatabaseName, ',')
+) T1 ON T1.value = T0.database_name
+INNER JOIN (
+SELECT *
+FROM dbo.split(@ArchiveName, ',')
+) T3 ON T0.table_name = T3.value + '_DOC_TYPE'
+FOR XML PATH('')
+), 1, 5, '')
+
+--EXEC

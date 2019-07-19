@@ -1,0 +1,30 @@
+Create a single database in Azure SQL Database using the Azure portal
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started
+
+Tutorial: Design a relational database in a single database within Azure SQL Database using SSMS
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database
+
+MSSQLSERVER2016
+
+Azure Storage (Storage Account -  create blob,container - Store and fetch data from stairage account)
+
+https://www.dotnettricks.com
+
+Webjob
+https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-get-started
+https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-how-to
+
+Queue storage sdk
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue#hostjson-settings
+https://github.com/Azure/azure-webjobs-sdk-samples/blob/master/BasicSamples/QueueOperations/Functions.cs
+
+Azure Functions C# developer reference
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#async
+
+Useful links
+https://azure.microsoft.com/en-us/services/
+https://docs.microsoft.com/en-us/azure/
+
+
+Exampple Link fo all 
+https://altkomsoftware.pl/en/blog/azure-functions/

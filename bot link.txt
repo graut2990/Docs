@@ -1,0 +1,12 @@
+https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-add-qna?view=azure-bot-service-4.0&tabs=csharp
+
+https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0
+
+https://www.qnamaker.ai/
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
+
+https://www.google.com/search?ei=jSAoXfLDDoWUtAa446r4CQ&q=how+to+create+chatbot+step+by+step+using+c%23&oq=how+to+create+chatbot+step+by+step+using+c%23&gs_l=psy-ab.3...1304.2391..2955...0.0..0.435.827.3-1j1......0....1..gws-wiz.......0i71j33i299.dSQHJBMGtzU
+
+
+https://aws.amazon.com/developers/getting-started/net/

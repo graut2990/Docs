@@ -1,0 +1,27 @@
+There are three kinds of directives in Angular:
+Components—directives with a template.
+Structural directives—change the DOM layout by adding and removing DOM elements.
+Attribute directives—change the appearance or behavior of an element, component, or another directive.
+
+you'll see a directive spelled in both UpperCamelCase and lowerCamelCase. Already you've seen NgIf and ngIf. There's a reason. NgIf refers to the directive class; 
+ngIf refers to the directive's attribute name.
+
+There are two other kinds of Angular directives, described extensively elsewhere: (1) components and (2) attribute directives.
+A component manages a region of HTML in the manner of a native HTML element. Technically it's a directive with a template.
+An attribute directive changes the appearance or behavior of an element, component, or another directive. For example, the built-in NgStyle directive changes several element styles at the same time.
+You can apply many attribute directives to one host element. You can only apply one structural directive to a host element.
+
+
+The ngIf directive doesn't hide elements with CSS. It adds and removes them physically from the DOM.
+
+
+There are two categories of pipes: pure and impure. Pipes are pure by default. Every pipe you've seen so far has been pure. You make a pipe impure by setting its pure flag to false. You could make the FlyingHeroesPipe impure like this:
+
+@Pipe({
+  name: 'flyingHeroesImpure',
+  pure: false
+})
+
+
+The impure AsyncPipe
+An impure caching pipe

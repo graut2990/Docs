@@ -1,0 +1,31 @@
+Domains
+
+Compute
+Mogration
+Storage
+Security&identity Compliance
+storage
+Networking and content delivery
+Messaging
+Database
+Managment Tools
+
+gauravftpuser
+gauravftpuser1
+
+windows machine
+superadmin
+superadmin123
+
+linux
+superadmin
+Superadmin@123
+
+
+
+
+Severless function or Azure Funtions
+Virtual machine
+Varitual Network
+Single Database
+WebApp (App services)

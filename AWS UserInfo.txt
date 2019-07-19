@@ -1,0 +1,11 @@
+Username - S3bucketFullAccessUser  pwd - S3bucketFullAccessUser1
+
+Access id - AKIAYDXS2232WPAL3SOZ
+
+Access Key - r2a11WNbkGocz+EBXPJpvt8LOy/CtFVlP09raDEy
+
+
+
+
+https://usersdatabucket.s3.us-west-2.amazonaws.com/21b9dd0d-2606-4ca0-9811-ebc9612cf022untitled.png?X-Amz-Expires=299&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYDXS2232WPAL3SOZ/20190716/us-west-2/s3/aws4_request&X-Amz-Date=20190716T123458Z&X-Amz-SignedHeaders=host&X-Amz-Signature=9a3ca1ce8eff359a8039c5c3096816757497d35154a0a6bcc4ac60eb314b4abe
+https://usersdatabucket.s3-us-west-2.amazonaws.com/21b9dd0d-2606-4ca0-9811-ebc9612cf022untitled.png 
